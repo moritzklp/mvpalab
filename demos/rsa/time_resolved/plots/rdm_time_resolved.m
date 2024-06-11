@@ -5,9 +5,9 @@
 %  Select subject 1.
 
 graph = mvpalab_plotinit();
-load ('../results/demo-rsa/corr/euclidean/rdms/result.mat')
+load ('../results/rsa-time-resolved/corr/pearson/rdms/result.mat')
 graph.sub = 1;
-graph.caxis = [3 15];
+graph.caxis = [-1 1];
 
 %% Plot video:
 %  Video animation of the evolution of the neural RDM for the specified

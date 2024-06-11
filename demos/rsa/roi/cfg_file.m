@@ -1,32 +1,32 @@
-%% Advacned configuration file for MVPA analysis - Folder and data files:
+%% Advacned configuration file for RSA analysis - Folder and data files:
 
-cfg.analysis = 'prueba';
+cfg.analysis = 'rsa-roi';
 cfg.location = pwd;
 
 %% REPRESENTATIONAL SIMILARITY ANALYSIS:
 
 % Subjects:
 cfg.rsa.subjects = {
-    %     '/Volumes/DATA/att-exp-fmri/derivatives/sub-001';
-    %     '/Volumes/DATA/att-exp-fmri/derivatives/sub-002';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-003';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-004';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-005';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-006';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-007';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-008';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-009';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-010';
-    %     '/Volumes/DATA/att-exp-fmri/derivatives/sub-011';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-012';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-013';
-    %     '/Volumes/DATA/att-exp-fmri/derivatives/sub-014';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-015';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-016';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-017';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-018';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-019';
-    '/Volumes/DATA/att-exp-fmri/derivatives/sub-020';
+    %'/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-001';
+    %'/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-002';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-003';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-004';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-005';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-006';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-007';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-008';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-009';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-010';
+    %'/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-011';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-012';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-013';
+    %'/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-014';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-015';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-016';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-017';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-018';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-019';
+    '/Volumes/DATA/att-exp/data/att-exp-fmri/derivatives/sub-020';
     };
 
 cfg.rsa.betafolder = 'GLM_models_decoding';
@@ -59,10 +59,6 @@ cfg.rsa.conditions = {
 cfg.rsa.roi = {
     'bin_rwVVC_bilateral.nii';
     'bin_rwM1_bilateral.nii';
-    %     'bin_rwA1_bilateral.nii';
-    %     'bin_rwPSL_bilateral.nii';
-    %     'bin_rwRSC_bilateral.nii';
-    %     'bin_rwSFL_bilateral.nii';
     };
 
 cfg.rsa.roi_folder = fullfile('anat','rois');

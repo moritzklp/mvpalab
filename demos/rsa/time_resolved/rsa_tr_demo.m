@@ -7,7 +7,7 @@
 %% Initialize project and run configuration file:
 
 cfg = mvpalab_init();
-run cfg_file_int_sel;
+run cfg_file;
 
 cfg.classmodel.parcomp = 1;
 

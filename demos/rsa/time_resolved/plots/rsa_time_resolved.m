@@ -1,14 +1,14 @@
 %% Initialize and configure plots:
 
-loaddir = '/Users/David/Sourcecode/mvpalab/demos/rsa/time_resolved/results/demo-rsa/corr/pearson';
+loaddir = '/Users/David/Sourcecode/mvpalab/demos/rsa/time_resolved/results/rsa-time-resolved/corr/pearson';
 
 graph = mvpalab_plotinit();
  
 color = 'aguamarine';
 
 % Axis limits:
-graph.xlim = [-200 7000];
-graph.ylim = [-.3 .3];
+graph.xlim = [-100 1200];
+graph.ylim = [-.3 1];
 
 % Axes labels and titles:
 graph.xlabel = 'Time (ms)';
@@ -41,8 +41,8 @@ hold on
 
 
 % Load results model 1: 
-load ([loaddir '/target_category_model/result.mat']);
-load ([loaddir '/target_category_model/stats.mat']);
+load ([loaddir '/block_model/result.mat']);
+load ([loaddir '/block_model/stats.mat']);
 
 % Significant indicator:
 graph.sigh = -0.1;
@@ -53,8 +53,8 @@ mvpalab_plotdecoding(graph,cfg,result,stats);
 
 
 % Load results model 2: 
-load ([loaddir '/task_demand_model/result.mat']);
-load ([loaddir '/task_demand_model/stats.mat']);
+load ([loaddir '/stimuli_model/result.mat']);
+load ([loaddir '/stimuli_model/stats.mat']);
 
 graph.sigh = -0.15;
 graph.shadecolor = graph.colorSch{5};
@@ -67,8 +67,8 @@ mvpalab_plotdecoding(graph,cfg,result,stats);
 % end
 
 % Load results model 3:
-load ([loaddir '/target_relevant_feature/result.mat']);
-load ([loaddir '/target_relevant_feature/stats.mat']);
+load ([loaddir '/validity_model/result.mat']);
+load ([loaddir '/validity_model/stats.mat']);
 
 % Significant indicator:
 graph.sigh = -0.2;
