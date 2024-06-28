@@ -30,31 +30,31 @@ for roi = 1 : length(cfg.rsa.roi)
         subject_roi = subject_rois.(subject_roi_name);
         
         %% Masked data:
-        masked{sub,1} = mvpalab_maskbetas(subject_roi,subject_betas);
+        masked{sub} = mvpalab_maskbetas(subject_roi,subject_betas);
         
         %% Prepare data: [betas x voxels]
-        masked{sub,1} = mvpalab_combineruns(cfg,masked{sub});
+        masked{sub} = mvpalab_combineruns(cfg,masked{sub});
         
         %% Extract RDM for each roi and subject:
         %  This function returns 2D matrices containing the RDMs according
         %  to the following structure:
         %  rdm - [n_conditions (per run) x voxels]
         
-        rdm{sub,1} = mvpalab_computerdm(cfg,masked{sub});
+        rdm{sub} = mvpalab_computerdm(cfg,masked{sub});
         
         %% Merge conditions if needed:
         %  Combine conditions of different runs in a global condition if
         %  needed.
         %  rdm - [n_conditions x voxels]
         
-        rdm{sub,1} = mvpalab_mergerunsrdm(cfg,subject_betas,rdm{sub});
+        rdm{sub} = mvpalab_mergerunsrdm(cfg,subject_betas,rdm{sub});
         
         %% Vectorize RDMs:
         %  Both theoretical and empirical DRMs are vectorized in order to
         %  compute the Representational Similarity Analysis.
         %  vrdms - [1 x vectorized]
         
-        vrdms{sub,1} = mvpalab_vectorizerdm(cfg,rdm{sub});
+        vrdms{sub} = mvpalab_vectorizerdm(cfg,rdm{sub});
         
         %% Compute the Representational similarity analysis:
         %  Empirical and theoretical models are correlated to obtain the time
