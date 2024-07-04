@@ -40,6 +40,7 @@ cfg.rsa.modality = 'corr';
 cfg.rsa.distance = 'pearson';
 cfg.rsa.trialwise = false;
 cfg.rsa.normrdm = true;
+cfg.rsa.cvFolds = 2;
 
 %% VECTORIZED THEORETHICAL MODELS:
                      %|          %|        %|      %|    %|  %| %| 
